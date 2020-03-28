@@ -1,6 +1,6 @@
 INCPATH  = ./header
 TOOLPATH = ./tool
-GCC = gcc
+GCC = gcc -g
 MAKE = make
 DEL      = del
 
