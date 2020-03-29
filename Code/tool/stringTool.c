@@ -1,62 +1,86 @@
 #include "stringTool.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 
 char** split(char *str,char split,int * count)
 {
-	int splitSize = 0;
-	int* tokenSize = (int *) malloc(sizeof(int) * strlen(str));
-	char *tempptr = str;
-	char temp = *tempptr;
-	tempptr++;
-	int tokenSizeTemp = 0;
+	int* subStrSizeList = (int *) malloc(sizeof(int) * strlen(str));
+	initSubStrSizeList(str, split,count,subStrSizeList);
 	
-	while(temp != '\0'){
-		tokenSizeTemp ++;
-		if(temp == split){
-			
-			*(tokenSize+splitSize) = tokenSizeTemp;
-			splitSize ++;
-			tokenSizeTemp = 0;
-		}
-		temp = *tempptr;
-		tempptr++;
-	}
-	*(tokenSize+splitSize) = tokenSizeTemp;
+	int subStrCount = *count;
+	char ** splitResult =(char **) malloc(sizeof(char*) * subStrCount);
+	initSplitResult(splitResult, subStrCount,subStrSizeList);
 	
-	splitSize++;
-	*count = splitSize;
-	char ** splitResult =(char **) malloc(sizeof(char*) * splitSize);
-	
-	
-	int index = 0 ;
-	for(index = 0 ; index < splitSize; index ++){
-		char * t = (char *)malloc(sizeof(char) * (*(tokenSize + index) + 1));
-		if (t == NULL){
-			printf("error \r\n");
-		}else{
-			printf("succeed \r\n");
-		}
-		*(splitResult + index) = t;
-	}
 	
 	char ** tempReulst = splitResult;
-	temp = *str;
+	char temp = *str;
 	str++;
-	index = 0;
+	int index = 0;
 	while(temp != '\0'){
 		*(*(tempReulst) + index) = temp;
 		index++;
 		if(temp == split){
-			*(*(tempReulst) + index) = '\0';
+			*(*(tempReulst) + index - 1) = '\0';
 			tempReulst ++;
 			index = 0;
 		}
 		temp = *str;
 		str++;
 	}
-	
-	free(tokenSize);
+	*(*(tempReulst) + index) = '\0';
+	free(subStrSizeList);
 	
 	return splitResult ;
+}
+
+void freeSplitResult(char ** splitResult, int count)
+{
+	int i = 0;
+	for(i = 0 ; i < count; i++){
+		free(splitResult[i]);
+	}
+	free(splitResult);	
+}
+
+
+//static
+static void initSubStrSizeList(char *str,char split,int *count,int *subStrSizeList)
+{
+	int subStrSize = 0;
+	
+	char *tempptr = str;
+	char temp = *tempptr;
+	tempptr++;
+	int subStrSizeListTemp = 0;
+	
+	while(temp != '\0'){
+		subStrSizeListTemp ++;
+		if(temp == split){
+			*(subStrSizeList+subStrSize) = subStrSizeListTemp;
+			subStrSize ++;
+			subStrSizeListTemp = 0;
+		}
+		temp = *tempptr;
+		tempptr++;
+	}
+	*(subStrSizeList+subStrSize) = subStrSizeListTemp;
+	
+	
+		subStrSize++;
+	
+	
+	*count = subStrSize;
+	
+}
+
+static void initSplitResult(char ** splitResult,int subStrCount,int *subStrSizeList)
+{
+	int index = 0 ;
+	for(index = 0 ; index < subStrCount; index ++){
+		char * t = (char *)malloc(sizeof(char) * (*(subStrSizeList + index) + 1));
+		*(splitResult + index) = t;
+	}
+	
 }

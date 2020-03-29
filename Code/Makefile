@@ -24,3 +24,4 @@ mud : mud.o logger.o stringTool.o
 
 clean:
 	-$(DEL) *.o
+	-$(DEL) mud.exe

@@ -4,22 +4,28 @@
 #include "logger.h"
 #include "stringTool.h"
 
-
-int main(void)
+void test()
 {
-	char * mapConfig = "1,n:3,s:5,w:2,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4,e:4";
+	char * mapConfig = "1,2,3,4,12313123";
 	
 	int count = 0;
 	char ** r = split(mapConfig,',',&count);
 	int i = 0;
-	printf("String %s, count :%d\r\n",mapConfig,count);
+	printf("String %s| count :%d\r\n",mapConfig,count);
 	for(i = 0 ; i < count; i++){
-		printf("i %d",i);
 		loginfo(r[i]);
-		free(r[i]);
 	}
-	free(r);
+	freeSplitResult(r,count);
 	
+}
+
+int main(void)
+{
+	
+	//while(1){
+		
+		test();
+	//}
 	system("pause"); 
 	return 1;
 	
