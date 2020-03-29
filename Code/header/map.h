@@ -19,9 +19,12 @@
 struct mapNode{
 	unsigned int id;
 	char *desc;
-	
-	 
+	struct mapNode* exit_n;
+	struct mapNode* exit_s;
+	struct mapNode* exit_w;
+	struct mapNode* exit_e;
  };
+ 
 struct world{
 	 struct mapNode *head;
 	 int totalNode;
