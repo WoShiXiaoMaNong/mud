@@ -1,0 +1,15 @@
+Map Generator
+	Step1: Get matadata list and mapNode from map config file.
+	       map config file format : 1,n:2,s:3,w:4,e:5  
+		                            id,direction:direction id,....
+		   matadata:
+					id,
+					directoins
+		   mapNode:
+					include id only.
+	Step2: Enrich map nodes.
+		   mapping those map nodes base on directions.
+    
+	Step3: Clean up temp resource (Generate by malloc)
+	Step4: build struct world and return it;
+		  
