@@ -1,17 +1,16 @@
 INCPATH  = ./header
-TOOLPATH = ./tool
 GCC = gcc -g
-MAKE = make
+MAKE = ./tool/make
 DEL      = del
 
 default :
 	$(MAKE) mud
 
-logger.o: $(TOOLPATH)/logger.c $(INCPATH)/logger.h Makefile
-	$(GCC) -c $(TOOLPATH)/logger.c -I $(INCPATH) -o logger.o
+logger.o: logger.c $(INCPATH)/logger.h Makefile
+	$(GCC) -c logger.c -I $(INCPATH) -o logger.o
 
-stringTool.o : $(TOOLPATH)/stringTool.c $(INCPATH)/stringTool.h Makefile
-	$(GCC) -c $(TOOLPATH)/stringTool.c -I $(INCPATH) -o stringTool.o
+stringTool.o : stringTool.c $(INCPATH)/stringTool.h Makefile
+	$(GCC) -c stringTool.c -I $(INCPATH) -o stringTool.o
 	
 map.o : map.c $(INCPATH)/map.h Makefile
 	$(GCC) -c map.c -I $(INCPATH) -o map.o	
