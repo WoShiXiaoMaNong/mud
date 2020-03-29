@@ -2,8 +2,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
-
+int stringToInt(char *number)
+{
+	int result = 0;
+	int size = strlen(number);
+	int index = 0;
+	for(index = 0 ; index < size; index ++){
+		char temp = *(number + index);
+		char tempNum = temp - '0';
+		result += tempNum * round(pow(10,size - index - 1));
+	}
+	
+	
+	return result;
+}
 char** split(char *str,char split,int * count)
 {
 	int* subStrSizeList = (int *) malloc(sizeof(int) * strlen(str));

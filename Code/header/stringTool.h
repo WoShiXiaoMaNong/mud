@@ -5,6 +5,7 @@
  
  void freeSplitResult(char ** splitResult, int count);
  
+ int stringToInt(char *number);
  
  
  //static 
