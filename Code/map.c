@@ -1,8 +1,10 @@
  #include "map.h"
  #include "logger.h"
+ #include "stringTool.h"
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
+ 
  
  void initWorld(struct world* mud,char *mapConfig)
  {
@@ -14,12 +16,10 @@
 		logerror("Alloc memory for map node mata data head failed!");
 		return;
 	}
-
 	loginfo("Alloc memory for map node mata data head succeed!");
 	
+	loginfo("InitMapNodeMataData start!");
 	initMapNodeMataData(head, mapConfig);
-	
-	
 	
 	freeMapNodeMataData(head);
  }
@@ -42,7 +42,7 @@
 	int index = 0;
 	char temp = fgetc(fp);
 	char line[1024];
-	
+	loginfo("Start to parse map config line by line.(Line size limit is 1024)");
 	while(temp != '\0' && temp != EOF){
 		if(temp == '\n'){
 			temp = '\0';
@@ -62,13 +62,12 @@
 	fclose(fp);
 	free(previous->next);
 	previous->next = NULL;
-	 
  }
  
  static void buildNodeMataData(struct mapNodeMataData* mataData, char * mataStr)
  {
 	int count = 0;
-	char ** splitResult = split(mataStr,SPLIT_CHAR,&count);
+	char ** splitResult = (char **)split(mataStr,SPLIT_CHAR,&count);
 	char *idStr = *splitResult;
 	int id = stringToInt(idStr);
 	mataData->id = id;
