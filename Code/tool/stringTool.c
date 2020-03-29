@@ -11,6 +11,7 @@ char** split(char *str,char split,int * count)
 	
 	int subStrCount = *count;
 	char ** splitResult =(char **) malloc(sizeof(char*) * subStrCount);
+	memset(splitResult,sizeof(char*) * subStrCount,0);
 	initSplitResult(splitResult, subStrCount,subStrSizeList);
 	
 	
@@ -66,11 +67,7 @@ static void initSubStrSizeList(char *str,char split,int *count,int *subStrSizeLi
 		tempptr++;
 	}
 	*(subStrSizeList+subStrSize) = subStrSizeListTemp;
-	
-	
-		subStrSize++;
-	
-	
+	subStrSize++;
 	*count = subStrSize;
 	
 }
@@ -79,7 +76,9 @@ static void initSplitResult(char ** splitResult,int subStrCount,int *subStrSizeL
 {
 	int index = 0 ;
 	for(index = 0 ; index < subStrCount; index ++){
-		char * t = (char *)malloc(sizeof(char) * (*(subStrSizeList + index) + 1));
+		int subStrSize = *(subStrSizeList + index) + 1;
+		char * t = (char *)malloc(sizeof(char) * subStrSize);
+		memset(t,sizeof(char) * subStrSize,0);
 		*(splitResult + index) = t;
 	}
 	

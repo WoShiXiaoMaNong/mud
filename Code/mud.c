@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "logger.h"
 #include "stringTool.h"
+#include "map.h"
 
 void test()
 {
@@ -21,11 +22,9 @@ void test()
 
 int main(void)
 {
-	
-	//while(1){
-		
-		test();
-	//}
+	char * filePath = "C:\\Users\\Administrator\\Desktop\\Mud\\design\\testMap.txt";
+	struct world* mud = (struct world*)malloc(sizeof(struct world*));
+	initWorld(mud,filePath);
 	system("pause"); 
 	return 1;
 	
