@@ -1,0 +1,76 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DEL	Code/Makefile	/^DEL  = rm$/;"	kind:m	line:4
+DIRECTOIN_E	Code/header/map.h	8;"	kind:d	line:8
+DIRECTOIN_N	Code/header/map.h	5;"	kind:d	line:5
+DIRECTOIN_S	Code/header/map.h	6;"	kind:d	line:6
+DIRECTOIN_W	Code/header/map.h	7;"	kind:d	line:7
+GCC	Code/Makefile	/^GCC = gcc -g$/;"	kind:m	line:2
+INCPATH	Code/Makefile	/^INCPATH  = .\/header$/;"	kind:m	line:1
+MAKE	Code/Makefile	/^MAKE = make$/;"	kind:m	line:3
+SPLIT_CHAR	Code/header/map.h	3;"	kind:d	line:3
+SPLIT_DIRECT_ID	Code/header/map.h	4;"	kind:d	line:4
+buildNodeMataData	Code/header/map.h	/^ static void buildNodeMataData(struct mapNodeMataData* mataData, char * mataStr);$/;"	kind:p	line:41	signature:(struct mapNodeMataData* mataData, char * mataStr)
+buildNodeMataData	Code/map.c	/^ static void buildNodeMataData(struct mapNodeMataData* mataData, char * mataStr)$/;"	kind:f	line:67	file:	signature:(struct mapNodeMataData* mataData, char * mataStr)
+createEmptyMataData	Code/header/map.h	/^ static struct mapNodeMataData* createEmptyMataData();$/;"	kind:p	line:38	signature:()
+createEmptyMataData	Code/map.c	/^ static struct mapNodeMataData* createEmptyMataData()$/;"	kind:f	line:121	file:
+desc	Code/header/map.h	/^	char *desc;$/;"	kind:m	line:21	struct:mapNode	access:public
+directoin_e_id	Code/header/map.h	/^	unsigned int directoin_e_id;$/;"	kind:m	line:15	struct:mapNodeMataData	access:public
+directoin_n_id	Code/header/map.h	/^	unsigned int directoin_n_id;$/;"	kind:m	line:12	struct:mapNodeMataData	access:public
+directoin_s_id	Code/header/map.h	/^	unsigned int directoin_s_id;$/;"	kind:m	line:13	struct:mapNodeMataData	access:public
+directoin_w_id	Code/header/map.h	/^	unsigned int directoin_w_id;$/;"	kind:m	line:14	struct:mapNodeMataData	access:public
+exit_e	Code/header/map.h	/^	struct mapNode* exit_e;$/;"	kind:m	line:25	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+exit_n	Code/header/map.h	/^	struct mapNode* exit_n;$/;"	kind:m	line:22	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+exit_s	Code/header/map.h	/^	struct mapNode* exit_s;$/;"	kind:m	line:23	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+exit_w	Code/header/map.h	/^	struct mapNode* exit_w;$/;"	kind:m	line:24	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+freeMapNodeMataData	Code/header/map.h	/^ static void freeMapNodeMataData(struct mapNodeMataData* head);$/;"	kind:p	line:42	signature:(struct mapNodeMataData* head)
+freeMapNodeMataData	Code/map.c	/^ static void freeMapNodeMataData(struct mapNodeMataData* head)$/;"	kind:f	line:103	file:	signature:(struct mapNodeMataData* head)
+freeSplitResult	Code/header/stringTool.h	/^ void freeSplitResult(char ** splitResult, int count);$/;"	kind:p	line:6	signature:(char ** splitResult, int count)
+freeSplitResult	Code/stringTool.c	/^void freeSplitResult(char ** splitResult, int count)$/;"	kind:f	line:53	signature:(char ** splitResult, int count)
+head	Code/header/map.h	/^	 struct mapNode *head;$/;"	kind:m	line:29	struct:world	typeref:struct:world::mapNode	access:public
+id	Code/header/map.h	/^	unsigned int id;$/;"	kind:m	line:11	struct:mapNodeMataData	access:public
+id	Code/header/map.h	/^	unsigned int id;$/;"	kind:m	line:20	struct:mapNode	access:public
+initMapNodeMataData	Code/header/map.h	/^ static void initMapNodeMataData(struct mapNodeMataData* head, char *mapConfig);$/;"	kind:p	line:40	signature:(struct mapNodeMataData* head, char *mapConfig)
+initMapNodeMataData	Code/map.c	/^ static void initMapNodeMataData(struct mapNodeMataData* head, char *mapConfig)$/;"	kind:f	line:29	file:	signature:(struct mapNodeMataData* head, char *mapConfig)
+initSplitResult	Code/header/stringTool.h	/^ static void initSplitResult(char ** splitResult,int subStrCount,int *subStrSizeList);$/;"	kind:p	line:13	signature:(char ** splitResult,int subStrCount,int *subStrSizeList)
+initSplitResult	Code/stringTool.c	/^static void initSplitResult(char ** splitResult,int subStrCount,int *subStrSizeList)$/;"	kind:f	line:89	file:	signature:(char ** splitResult,int subStrCount,int *subStrSizeList)
+initSubStrSizeList	Code/header/stringTool.h	/^ static void initSubStrSizeList(char *str,char split,int *count,int *subStrSizeList);$/;"	kind:p	line:12	signature:(char *str,char split,int *count,int *subStrSizeList)
+initSubStrSizeList	Code/stringTool.c	/^static void initSubStrSizeList(char *str,char split,int *count,int *subStrSizeList)$/;"	kind:f	line:64	file:	signature:(char *str,char split,int *count,int *subStrSizeList)
+initWorld	Code/header/map.h	/^void initWorld(struct world* mud,char *mapConfig);$/;"	kind:p	line:34	signature:(struct world* mud,char *mapConfig)
+initWorld	Code/map.c	/^ void initWorld(struct world* mud,char *mapConfig)$/;"	kind:f	line:9	signature:(struct world* mud,char *mapConfig)
+logerror	Code/header/logger.h	/^ void logerror(char *info);$/;"	kind:p	line:5	signature:(char *info)
+logerror	Code/logger.c	/^void logerror(char *info)$/;"	kind:f	line:11	signature:(char *info)
+loginfo	Code/header/logger.h	/^ void loginfo(char *info);$/;"	kind:p	line:4	signature:(char *info)
+loginfo	Code/logger.c	/^void loginfo(char *info)$/;"	kind:f	line:6	signature:(char *info)
+main	Code/mud.c	/^int main(void)$/;"	kind:f	line:6	signature:(void)
+mapNode	Code/header/map.h	/^struct mapNode{$/;"	kind:s	line:19
+mapNode::desc	Code/header/map.h	/^	char *desc;$/;"	kind:m	line:21	struct:mapNode	access:public
+mapNode::exit_e	Code/header/map.h	/^	struct mapNode* exit_e;$/;"	kind:m	line:25	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+mapNode::exit_n	Code/header/map.h	/^	struct mapNode* exit_n;$/;"	kind:m	line:22	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+mapNode::exit_s	Code/header/map.h	/^	struct mapNode* exit_s;$/;"	kind:m	line:23	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+mapNode::exit_w	Code/header/map.h	/^	struct mapNode* exit_w;$/;"	kind:m	line:24	struct:mapNode	typeref:struct:mapNode::mapNode	access:public
+mapNode::id	Code/header/map.h	/^	unsigned int id;$/;"	kind:m	line:20	struct:mapNode	access:public
+mapNodeMataData	Code/header/map.h	/^ struct mapNodeMataData{$/;"	kind:s	line:10
+mapNodeMataData::directoin_e_id	Code/header/map.h	/^	unsigned int directoin_e_id;$/;"	kind:m	line:15	struct:mapNodeMataData	access:public
+mapNodeMataData::directoin_n_id	Code/header/map.h	/^	unsigned int directoin_n_id;$/;"	kind:m	line:12	struct:mapNodeMataData	access:public
+mapNodeMataData::directoin_s_id	Code/header/map.h	/^	unsigned int directoin_s_id;$/;"	kind:m	line:13	struct:mapNodeMataData	access:public
+mapNodeMataData::directoin_w_id	Code/header/map.h	/^	unsigned int directoin_w_id;$/;"	kind:m	line:14	struct:mapNodeMataData	access:public
+mapNodeMataData::id	Code/header/map.h	/^	unsigned int id;$/;"	kind:m	line:11	struct:mapNodeMataData	access:public
+mapNodeMataData::next	Code/header/map.h	/^	struct mapNodeMataData *next;$/;"	kind:m	line:16	struct:mapNodeMataData	typeref:struct:mapNodeMataData::mapNodeMataData	access:public
+mapNodeMataDataSetDirectId	Code/header/map.h	/^ static void mapNodeMataDataSetDirectId(struct mapNodeMataData* mataData,char direct,int id);$/;"	kind:p	line:39	signature:(struct mapNodeMataData* mataData,char direct,int id)
+mapNodeMataDataSetDirectId	Code/map.c	/^ static void mapNodeMataDataSetDirectId(struct mapNodeMataData* mataData,char direct,int id)$/;"	kind:f	line:90	file:	signature:(struct mapNodeMataData* mataData,char direct,int id)
+myLog	Code/header/logger.h	/^ static void myLog(char *infoType,char *info);$/;"	kind:p	line:6	signature:(char *infoType,char *info)
+myLog	Code/logger.c	/^static void myLog(char *infoType,char *info)$/;"	kind:f	line:17	file:	signature:(char *infoType,char *info)
+next	Code/header/map.h	/^	struct mapNodeMataData *next;$/;"	kind:m	line:16	struct:mapNodeMataData	typeref:struct:mapNodeMataData::mapNodeMataData	access:public
+split	Code/header/stringTool.h	/^ char** split(char *str,char split ,int * count);$/;"	kind:p	line:4	signature:(char *str,char split ,int * count)
+split	Code/stringTool.c	/^char** split(char *str,char split,int * count)$/;"	kind:f	line:21	signature:(char *str,char split,int * count)
+stringToInt	Code/header/stringTool.h	/^ int stringToInt(char *number);$/;"	kind:p	line:8	signature:(char *number)
+stringToInt	Code/stringTool.c	/^int stringToInt(char *number)$/;"	kind:f	line:7	signature:(char *number)
+totalNode	Code/header/map.h	/^	 int totalNode;$/;"	kind:m	line:30	struct:world	access:public
+world	Code/header/map.h	/^struct world{$/;"	kind:s	line:28
+world::head	Code/header/map.h	/^	 struct mapNode *head;$/;"	kind:m	line:29	struct:world	typeref:struct:world::mapNode	access:public
+world::totalNode	Code/header/map.h	/^	 int totalNode;$/;"	kind:m	line:30	struct:world	access:public
